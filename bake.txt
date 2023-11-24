@@ -1,0 +1,38 @@
+BAGELS
+1. Everything & Cheddar Bagel
+2. Plain Bagel
+3. Cinnamon Raisin Bagel
+4. Everything Bagel
+5. Avocado Spread
+
+CAKE POPS
+6. Earth Cake Pop
+7. Birthday Cake Pop
+8. Chocolate Cake Pop
+
+COOKIES, BROWNIES & BARS
+9. Double Chocolate Brownie
+10. Chocolate Chip Cookie
+11. Marshmallow Dream Bar
+
+CROISSANTS
+12. Ham & Swiss Croissant
+13. Butter Croissant
+14. Almond Croissant
+
+LOAVES & CAKES
+15. Red Velvet Loaf
+16. Red Velvet Loaf
+17. Iced Lemon Loaf
+18. Pumpkin & Pepita Loaf
+19. Banana, Walnut & Pecan Loaf
+
+DANISHES & DOUGHNUTS
+20. Cheese Danish
+21. Glazed Doughnut
+
+MUFFINS & SCONES
+22. Pumpkin Cream Cheese Muffin
+23. Blueberry Scone
+24. Petite Vanilla Bean Scone
+25. Blueberry Muffin

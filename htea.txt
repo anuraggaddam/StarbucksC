@@ -1,0 +1,19 @@
+CHAI TEAS:
+1. Chai Tea Latte
+2. Chai Tea
+
+BLACK TEAS:
+3. Royal English Breakfast Tea
+4. Royal English Breakfast Tea Latte
+5. Early Grey Tea
+6. London Fog Tea Latte
+
+GREEN TEAS:
+7. Emperor's Clouds & Mist
+8. Matcha Tea Latte
+9. Jade Citrus Mint Brewed tea
+10. Honey Citrus Mint Tea
+
+HERBAL TEAS:
+11. Mint Majesty
+12 Peach Tranquility
