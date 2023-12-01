@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include "../../header/FileIO.h"
 
 void write(){
 

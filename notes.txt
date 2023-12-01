@@ -22,9 +22,7 @@ Libraries:
     Write and Read are in one .c file.
         In Source folder, create a fileio folder 
     Must compile .c file into 1 .o file
-    Must create a library with that 1 .o file. 
-
-2. LIB_Interaction
+    Must create a library with that 1 .o file.
     Ask for user input
     Return an int value at the end
 
