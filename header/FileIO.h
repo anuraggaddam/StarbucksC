@@ -10,6 +10,7 @@ void categories();
 void splitter(char item[] ,int path);
 void picker(char fileName[] );
 void readFile(char fileName[], int path);
-
+int input();
+extern char *File;
 
 #endif //STARBUCKSC_FILEIO_H

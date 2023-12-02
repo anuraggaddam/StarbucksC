@@ -2,7 +2,7 @@
 #include <unistd.h>
 #include <string.h>
 #include "../../header/FileIO.h"
-#include "../../header/Interaction.h"
+
 
 
 
@@ -11,6 +11,8 @@
 //This is where the user can choose their category and this method will send the corresponding file to print
 void categories(){
     int selection= input();
+
+
 
     switch (selection){
         case 1:
@@ -93,9 +95,9 @@ I shall call this method and pass through end.
 
 //This takes the file and user input and sees if there is matching option in the file.
 //If there is no option, then recursion happens.
-void picker(char fileName[] ){
+void picker(char *File ){
     
-    FILE *buffFile = fopen(fileName, "r");
+    FILE *buffFile = fopen(File, "r");
     if (buffFile == NULL){
         printf("Something is broken in the picker method. Please debug");
         return;
@@ -121,7 +123,7 @@ void picker(char fileName[] ){
     //If user did invalid option, we should call the method again an dcheck for verificatoin
     if (strlen(item) == 0){
         printf("Option not found. Try Again\n");
-        picker(fileName);
+        picker(File);
     } 
     //Otherwise we will trim the array to take out the number in the first bit
  else{
@@ -142,34 +144,36 @@ void picker(char fileName[] ){
 
 
 //This method just reads the file that is being sent through
-//If it's from the main function, then we will call call categories.
+//If it's from the main function, then we will call categories.
 //otherwise we will call picker file which will take the string and break it down.
-void readFile(char fileName[], int path){
+void readFile(char *File, int path){
 
-
- //This little block of code prints out each line of the file to the console.
-  printf("\n\n\nloading options. Please wait\n");
-        sleep(1);
-        printf("\nPlease choose an option below:\n");
-        FILE *pFile = fopen(fileName,"r");
+    //This little block of code prints out each line of the file to the console.
+    printf("\n\n\nloading options. Please wait\n");
+    sleep(1);
+    printf("\nPlease choose an option below:\n");
+    FILE *pFile = fopen(File,"r");
+    if (pFile == NULL){
+        printf("Something went wrong;");
+    }
     char buffer[255];
-        while(fgets(buffer, 255,pFile) != NULL){
-            printf("%s" , buffer);
-        }
+    while(fgets(buffer, 255,pFile) != NULL){
+        printf("%s" , buffer);
+    }
     fclose(pFile);
-       printf("\n");
+    printf("\n");
 
 
-        //a path of 0 will call the function that sorts out what category file to print out
-            if (path == 0){
-                categories();
-            }
+    //a path of 0 will call the function that sorts out what category file to print out
+    if (path == 0){
+        categories();
+    }
 
         //a path of 1 will cycle through each line and send pick which one matches. If there is no match, ask user again.
-        //Create another method in this file for that. 
-            else if (path == 1){
-               picker(fileName);
-            }
+        //Create another method in this file for that.
+    else if (path == 1){
+        picker(File);
+    }
 
 }
 
