@@ -120,7 +120,7 @@ void picker(char *File ){
     }
     fclose(buffFile);
 
-    //If user did invalid option, we should call the method again an dcheck for verificatoin
+    //If user did invalid option, we should call the method again and check for verificatoin
     if (strlen(item) == 0){
         printf("Option not found. Try Again\n");
         picker(File);
