@@ -2,6 +2,8 @@
 #include "./header/FileIO.h"
 #include <stdlib.h>
 #include <string.h>
+#include "./header/Customize.h"
+
 char *File;
 int main(){
 

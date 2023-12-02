@@ -3,6 +3,7 @@
 #include <unistd.h>
 #include <string.h>
 #include "../../header/FileIO.h"
+#include "../../header/Customize.h"
 
 
 
@@ -100,17 +101,11 @@ if (path == 1){
         index++;
     }
 }
-  
 
-//Please comment out this section and free the variable onced it is passed down to the customizations
-    printf("\nYou have chosen:\n%s\n", end);
+    free(item);
+    item = NULL;
+    customize(end);
 
-/*
-
-This is where I create the basket library and create a temp function that stores this and gathers customization options
-I shall call this method and pass through end. 
-
-*/
 
 }
 
