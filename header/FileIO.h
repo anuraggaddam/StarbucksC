@@ -6,10 +6,10 @@
 #define STARBUCKSC_FILEIO_H
 
 void readFile(char fileName[], int path);
-void categories();
+void categories(char *File);
 void splitter(char item[] ,int path);
-void picker(char fileName[] );
-void readFile(char fileName[], int path);
+void picker(char *File);
+void readFile(char *File, int path);
 int input();
 extern char *File;
 
