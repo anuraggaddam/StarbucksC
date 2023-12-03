@@ -27,7 +27,7 @@ run:
 ifeq ($(OS),Linux)
 	@gcc -o ./builds/Linux Main.c -Iheader -Llibrary -l_IO -l_CUSTOMIZE
 	@cd builds && ./Linux
-else ifeq ($(OS),Dawin)
+else ifeq ($(OS),Darwin)
 	@gcc -o ./builds/Mac Main.c -Iheader -Llibrary -l_IO -l_CUSTOMIZE
 	@cd builds && ./Mac
 endif
