@@ -17,7 +17,7 @@ void customize(char *item){
 
     switch (input[0]) {
         case 'y':
-            printf("You cchose Yes\n");
+            printf("You chose Yes\n");
             break;
 
         case 'n':
