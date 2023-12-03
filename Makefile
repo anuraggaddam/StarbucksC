@@ -9,13 +9,13 @@ IO:
 
 Customizations:
 	@gcc -c ./source/Customizations/Customize.c -o ./objects/Customize.o
-
+	@gcc -c ./source/Customizations/IO.c -o ./objects/IO.o
 
 compile: IO Customizations
 
 Libraries:
 	@ar rcs ./library/lib_IO.a ./objects/menu.o ./objects/Interactions.o
-	@ar rcs ./library/lib_CUSTOMIZE.a ./objects/Customize.o
+	@ar rcs ./library/lib_CUSTOMIZE.a ./objects/Customize.o ./objects/IO.o
 	@echo "Ready to Run"
 
 clean:

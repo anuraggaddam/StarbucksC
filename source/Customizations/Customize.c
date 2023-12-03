@@ -83,14 +83,19 @@ void size()
     }
 }
 
+
+
 void options()
 {
     char *File = (char *)malloc(strlen("../text/custoptions.txt") + 1);
     strcpy(File, "../text/custoptions.txt");
-    char *cust = (char *)malloc(sizeof(char)*10);
-    readFile(File, 1);
-    strcpy(cust,temp);
-    printf("This is the order you chose: %s\n", cust);
+    customRead(File);
+    printf("Press 0 for done");
+    extract(File);
+
+    //After that, we will recursively as the user if they would like to add
+    // more  to their order
+
 }
 
 

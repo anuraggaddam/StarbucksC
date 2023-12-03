@@ -5,6 +5,8 @@
 void customize(char *item);
 void size();
 void options();
+void customRead(char *File);
+void extract(char *File);
 
 extern char *product;
 extern char *customizations;

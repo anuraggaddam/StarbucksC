@@ -105,14 +105,7 @@ if (path == 1){
 
     free(item);
     item = NULL;
-    if (product == NULL){
-        customize(end);
-    }
-    else{
-        temp = malloc(strlen(end)+1);
-        strcpy(temp,end);
-    }
-
+    customize(end);
 
 }
 
