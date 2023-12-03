@@ -1,6 +1,6 @@
 OS := $(shell uname)
 
-all: compile Libraries
+build: compile Libraries
 
 
 IO:
