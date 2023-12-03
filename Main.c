@@ -7,7 +7,7 @@
 char *File;
 int main(){
 
-    printf("\nHello consumer. Welcome to Starbucks!\n");
+    printf("\nHello customer. Welcome to Starbucks!");
 
     File = (char *) malloc(strlen("../text/category.txt")+1);
 

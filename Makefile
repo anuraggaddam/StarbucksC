@@ -12,12 +12,11 @@ Customizations:
 
 
 compile: IO Customizations
-	@echo "Compiling Files"
 
 Libraries:
-	@echo "Creating Libraries"
 	@ar rcs ./library/lib_IO.a ./objects/menu.o ./objects/Interactions.o
 	@ar rcs ./library/lib_CUSTOMIZE.a ./objects/Customize.o
+	@echo "Ready to Run"
 
 clean:
 	@rm -rf ./objects/* ./library/* ./builds/*

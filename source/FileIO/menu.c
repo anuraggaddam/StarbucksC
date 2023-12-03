@@ -8,6 +8,7 @@
 
 
 
+char *temp;
 
 //When the main function is ran in the Main.c file, this will end up getting called.
 //This is where the user can choose their category and this method will send the corresponding file to print
@@ -104,7 +105,13 @@ if (path == 1){
 
     free(item);
     item = NULL;
-    customize(end);
+    if (product == NULL){
+        customize(end);
+    }
+    else{
+        temp = malloc(strlen(end)+1);
+        strcpy(temp,end);
+    }
 
 
 }
@@ -172,7 +179,7 @@ void picker(char *File ){
 void readFile(char *File, int path){
 
     //This little block of code prints out each line of the file to the console.
-    printf("\n\n\nloading options. Please wait\n");
+    printf("\n\n\nloading options. please wait\n");
     sleep(1);
     printf("\nPlease choose an option below:\n");
     FILE *pFile = fopen(File,"r");
