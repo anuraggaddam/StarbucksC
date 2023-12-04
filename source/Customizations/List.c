@@ -9,7 +9,7 @@ void tempInsert(char *addCustomization){
   tempcustomizationsList *newElement;
   newElement = malloc(sizeof(tempcustomizationsList));
   newElement->data = malloc(strlen(addCustomization) + 1);
-  strcpy(newElement->data, addCustomization);
+  strcpy (newElement->data, addCustomization);
   newElement ->next = NULL;
   if (head == NULL){
     head = newElement;

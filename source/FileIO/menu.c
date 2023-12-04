@@ -92,19 +92,21 @@ void splitter(char *item ,int path) {
     int index = 0;
 
 if (path == 1){
-  for (int i = 3; i < strlen(item); i++) {
+  for (int i = 3; i < strlen(item)-3; i++) {
         end[index] = item[i];
         index++;
     }
 }else{
-      for (int i = 4; i < strlen(item); i++) {
+      for (int i = 4; i < strlen(item)-3; i++) {
         end[index] = item[i];
         index++;
     }
 }
-
+    end[index] = '\n';
     free(item);
     item = NULL;
+
+    tempInsert (end);
     customize(end);
 
 }
@@ -148,7 +150,6 @@ void picker(char *File ){
     //Otherwise we will trim the array to take out the number in the first bit
  else{
      //At this point all we are sending is the item to split it. We do not need to keep the file path any longer.
-
      free(File);
      File = NULL;
     if (choice >=10){

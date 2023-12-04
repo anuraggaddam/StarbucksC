@@ -14,7 +14,6 @@ void customize(char *item)
     // We will copy the item over. Then we will clear the item from memory. This way we can have a more unified system from here on out
     product = (char *)malloc(strlen(item) + 1);
     strcpy(product, item);
-
     // We are going to clear the memory and make it null
     free(item);
     item = NULL;
@@ -39,6 +38,7 @@ void customize(char *item)
         break;
     case 'n':
         printf("You chose no\n");
+      tempInsert (product);
         break;
     default:
         customize(product);
