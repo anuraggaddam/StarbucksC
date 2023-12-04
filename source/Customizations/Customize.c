@@ -7,6 +7,7 @@
 char *customizations;
 char *product;
 
+
 void customize(char *item)
 {
     // we are updating the global pointer product. This is where we keep the item of the product;

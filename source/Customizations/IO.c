@@ -100,10 +100,12 @@ void home(char *File){
 
 
 
-char * stringToFileConverter(char *item){
-char *myFile = (char *)malloc(sizeof(char)*15);
-    // Concatenate strings
-    strcat(myFile, "../text/");
+
+char *stringToFileConverter(char *item) {
+    // Allocate enough memory for the concatenated strings and null terminator
+    char *myFile = (char *)malloc(strlen("../text/") + strlen(item) + strlen(".txt") + 1);
+    // Copy the strings
+    strcpy(myFile, "../text/");
     strcat(myFile, item);
     strcat(myFile, ".txt");
     return myFile;

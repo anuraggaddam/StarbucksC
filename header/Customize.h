@@ -15,4 +15,7 @@ extern char *product;
 extern char *customizations;
 extern char *temp;
 
+
+
+
 #endif //STARBUCKSC_CUSTOMIZE_H
