@@ -60,21 +60,24 @@ void size()
     case 's':
     case 'S':
         customizations = (char *)malloc(14);
-        strcpy(customizations, "\tSize: small");
+        strcpy(customizations, "\tSize: small\n");
+        tempInsert (customizations);
         free(input);
         input = NULL;
         break;
     case 'M':
     case 'm':
         customizations = (char *)malloc(14);
-        strcpy(customizations, "\tSize: medium");
+        strcpy(customizations, "\tSize: medium\n");
+        tempInsert (customizations);
         free(input);
         input = NULL;
         break;
     case 'L':
     case 'l':
         customizations = (char *)malloc(14);
-        strcpy(customizations, "\tSize: large");
+        strcpy(customizations, "\tSize: large\n");
+        tempInsert (customizations);
         free(input);
         input = NULL;
         break;
