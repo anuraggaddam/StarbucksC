@@ -7,6 +7,8 @@ void size();
 void options();
 void customRead(char *File);
 void extract(char *File);
+void home(char *File);
+void stringToFileConverter(char *item);
 
 extern char *product;
 extern char *customizations;

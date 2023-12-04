@@ -53,9 +53,22 @@ void extract(char *File) {
 
     fclose(buff);
 
+      char *end = (char *) malloc(strlen(File));
+      int index = 0;
     if (op != NULL) {
-        printf("Item: %s\n", op);
-        free(op); // Free allocated memory
+       for (int i = 3; i < strlen(op); i++) {
+        end[index] = op[i];
+        index++;
+    }
+        end[index] = '\0';
+
+         size_t len = strlen(end);
+    if (len > 0 && end[len - 1] == '\n') {
+        end[len - 1] = '\0';
+    }
+
+    stringToFileConverter(end);
+    free(op); // Free allocated memory
     } else {
         printf("Option not found. Try Again\n");
         // You might want to consider using a loop instead of recursion
@@ -63,3 +76,23 @@ void extract(char *File) {
     }
 }
 
+
+
+void home(char *File){
+extract(File);
+strcat(customizations, "\n\tIf you can read this. You are good");
+  printf("%s\n",customizations);
+
+
+}
+
+void stringToFileConverter(char *item){
+char *myFile = (char *)calloc(strlen(item) + 12, sizeof(char));
+    // Concatenate strings
+    strcat(myFile, "./text/");
+    strcat(myFile, item);
+    strcat(myFile, ".txt");
+
+    // Print the result
+    printf("Hello. The new file link is:\n%s\n", myFile);
+}
