@@ -6,9 +6,10 @@ void customize(char *item);
 void size();
 void options();
 void customRead(char *File);
-void extract(char *File);
+char * extract(char *File);
 void home(char *File);
-void stringToFileConverter(char *item);
+char * stringToFileConverter(char *item);
+void addcustom(char *option);
 
 extern char *product;
 extern char *customizations;

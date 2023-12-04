@@ -29,11 +29,11 @@ void customRead(char * File){
 //After we extract the value, we turn it into a .txt file and then we
 //can read from that file.
 //After that,
-void extract(char *File) {
+char * extract(char *File) {
     FILE *buff = fopen(File, "r");
     if (buff == NULL) {
         printf("Error opening file. Please check the file path and try again.\n");
-        return;
+        extract(File);
     }
 
     int choice = input();
@@ -67,32 +67,59 @@ void extract(char *File) {
         end[len - 1] = '\0';
     }
 
-    stringToFileConverter(end);
     free(op); // Free allocated memory
     } else {
         printf("Option not found. Try Again\n");
+        extract(File);
         // You might want to consider using a loop instead of recursion
         // to repeatedly prompt the user for a valid option.
     }
+    return end;
+
+}
+
+
+
+void home(char *File){  
+    char *name = (char *) malloc(sizeof(char)*10);
+    char *path = (char*)malloc(sizeof(char)*15);
+    name = extract(File);
+    path = stringToFileConverter(name);
+
+    //Now we have the file path in the variable path.
+    //We should send it to the read
+
+   customRead(path);
+   char *option = malloc(sizeof(char)*20);
+   option = extract(path);
+   addcustom(option);
+
+
+    
 }
 
 
 
-void home(char *File){
-extract(File);
-strcat(customizations, "\n\tIf you can read this. You are good");
-  printf("%s\n",customizations);
-
-
-}
-
-void stringToFileConverter(char *item){
-char *myFile = (char *)calloc(strlen(item) + 12, sizeof(char));
+char * stringToFileConverter(char *item){
+char *myFile = (char *)malloc(sizeof(char)*15);
     // Concatenate strings
-    strcat(myFile, "./text/");
+    strcat(myFile, "../text/");
     strcat(myFile, item);
     strcat(myFile, ".txt");
-
-    // Print the result
-    printf("Hello. The new file link is:\n%s\n", myFile);
+    return myFile;
 }
+
+
+
+void addcustom(char *option){
+
+    int * number;
+    number = malloc(sizeof(int));
+    printf("How many packets of %s do you want?\n",option);
+    scanf("%d",number);
+    printf("%d", *number);
+
+    
+
+}
+

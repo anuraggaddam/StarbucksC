@@ -84,7 +84,7 @@ void size()
 }
 
 
-
+ 
 void options()
 {
     char *File = (char *)malloc(strlen("../text/custoptions.txt") + 1);
