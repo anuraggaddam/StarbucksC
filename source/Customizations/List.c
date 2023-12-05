@@ -114,10 +114,7 @@ void ship() {
 
     while (finalit != NULL) {
         if (strstr(uniqueEntries, finalit->data) == NULL) {
-            // If the current entry is not in uniqueEntries, concatenate it
             strcat(finalCustomize, finalit->data);
-            strcat(finalCustomize, "\n");
-            // Update uniqueEntries with the current entry
             strcat(uniqueEntries, finalit->data);
         }
         finalit = finalit->next;
