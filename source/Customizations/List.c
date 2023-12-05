@@ -56,6 +56,11 @@ void check(char *item, char *number) {
 
 
 
+    tempcustomizationsList *newNode = malloc(sizeof(tempcustomizationsList));
+    newNode->data = malloc(strlen(addCusto)+1);
+    strcpy(newNode->data, addCusto);
+    newNode->next = NULL;    
+
 
 
   //This section is here to detect weather or not an item is already been customized. 
@@ -64,7 +69,9 @@ void check(char *item, char *number) {
   prev = NULL;
         while (current != NULL) {
         if (strstr(current->data, item) != NULL) {
-            printf("Already here\n");
+            prev -> next = newNode;
+            newNode->next = current->next;
+            toTheEnd = 1;
             break;
         }
         prev = current;
@@ -72,12 +79,9 @@ void check(char *item, char *number) {
     }
   
 
-    
-    tempInsert(addCusto);
-
-
-
-
+    if(toTheEnd == 0){
+      tempInsert(addCusto);
+    }
 
 
 }
