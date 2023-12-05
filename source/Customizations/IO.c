@@ -116,13 +116,12 @@ char *stringToFileConverter(char *item) {
 void addcustom(char *option){
 
    int * number;
-    number = malloc(sizeof(int));
+    number = malloc(sizeof(int)*2);
     printf("How many packets of %s do you want?\n",option);
     scanf("%d",number);
-    char *numberString = malloc(sizeof(char)*10);
-    sprintf(numberString, "%d", *number);
+   char *numberString = malloc(sizeof(char)*10);
+   sprintf(numberString, "%d", *number);
     check(option,numberString);
-    //tempIterate();
     /////////////////////
     again();    
     

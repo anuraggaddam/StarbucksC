@@ -92,12 +92,12 @@ void splitter(char *item ,int path) {
     int index = 0;
 
 if (path == 1){
-  for (int i = 3; i < strlen(item)-1; i++) {
+  for (int i = 3; i < strlen(item)-2; i++) {
         end[index] = item[i];
         index++;
     }
 }else{
-      for (int i = 4; i < strlen(item)-1; i++) {
+      for (int i = 4; i < strlen(item)-2; i++) {
         end[index] = item[i];
         index++;
     }
