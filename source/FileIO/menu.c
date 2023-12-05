@@ -88,21 +88,21 @@ void categories(char *File){
 
 //This takes the string and takes out the number and period.
 void splitter(char *item ,int path) {
-    char *end = (char *) malloc(strlen(item)); // Initialize the array and null-terminate it
+    char *end = (char *) malloc(strlen(item)-3); // Initialize the array and null-terminate it
     int index = 0;
 
 if (path == 1){
-  for (int i = 3; i < strlen(item)-2; i++) {
+  for (int i = 3; i < strlen(item)-1; i++) {
         end[index] = item[i];
         index++;
     }
 }else{
-      for (int i = 4; i < strlen(item)-2; i++) {
+      for (int i = 4; i < strlen(item)-1; i++) {
         end[index] = item[i];
         index++;
     }
 }
-    end[index] = '\n';
+    end[index] = '\0';
     free(item);
     item = NULL;
 
