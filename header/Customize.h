@@ -15,6 +15,7 @@ void tempInsert(char *option);
 void again();
 void check(char *item, char *number);
 void clean ();
+void ship();
 
 extern char *product;
 extern char *customizations;

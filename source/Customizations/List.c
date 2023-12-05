@@ -101,11 +101,31 @@ void clean (){
     iterator = iterator->next;
   }
 
-  tempIterate ();
-
+  ship();
 
 }
 
+void ship() {
+    tempcustomizationsList* finalit = head;
+    char* finalCustomize = calloc(1, sizeof(char) * 100);
 
+    // Use a separate string to keep track of unique entries
+    char uniqueEntries[100] = "";
+
+    while (finalit != NULL) {
+        if (strstr(uniqueEntries, finalit->data) == NULL) {
+            // If the current entry is not in uniqueEntries, concatenate it
+            strcat(finalCustomize, finalit->data);
+            strcat(finalCustomize, "\n");
+            // Update uniqueEntries with the current entry
+            strcat(uniqueEntries, finalit->data);
+        }
+        finalit = finalit->next;
+    }
+
+    printf("%s", finalCustomize);
+
+    free(finalCustomize);
+}
 
 
