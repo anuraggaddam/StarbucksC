@@ -89,7 +89,22 @@ void check(char *item, char *number) {
 
 
 
+void clean (){
 
+  tempcustomizationsList *iterator = head;
+  tempcustomizationsList *prev = NULL;
+  while(iterator!=NULL){
+    if(strstr(iterator->data,": 0")){
+     prev->next = iterator->next;
+    }
+    prev = iterator;
+    iterator = iterator->next;
+  }
+
+  tempIterate ();
+
+
+}
 
 
 

@@ -147,7 +147,7 @@ void again(){
         break;
     case 'n':
         tempInsert (product);
-        tempIterate();
+        clean();
         break;
     default:
         again();
