@@ -115,13 +115,46 @@ char *stringToFileConverter(char *item) {
 
 void addcustom(char *option){
 
-    int * number;
+   int * number;
     number = malloc(sizeof(int));
     printf("How many packets of %s do you want?\n",option);
     scanf("%d",number);
-    printf("%d", *number);
-
+    char *numberString = malloc(sizeof(char)*10);
+    sprintf(numberString, "%d", *number);
+    check(option,numberString);
+    //tempIterate();
+    /////////////////////
+    again();    
     
+
+}
+
+
+void again(){
+
+    char *input;
+    input = (char *)malloc(sizeof(char) * 5);
+    printf("Would you like to customize your oder?\n");
+    printf("y for yes n for no:\n");
+    scanf("%s", input);
+    input = (char *)realloc(input, sizeof(char));
+
+    switch (input[0])
+    {
+    case 'y':
+        free(input);
+        input = NULL;
+        options();
+        break;
+    case 'n':
+        tempInsert (product);
+        tempIterate();
+        break;
+    default:
+        again();
+        break;
+    }
+
 
 }
 

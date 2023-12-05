@@ -12,6 +12,8 @@ char * stringToFileConverter(char *item);
 void addcustom(char *option);
 void tempIterate();
 void tempInsert(char *option);
+void again();
+void check(char *item, char *number);
 
 extern char *product;
 extern char *customizations;

@@ -37,8 +37,8 @@ void customize(char *item)
         options();
         break;
     case 'n':
-        printf("You chose no\n");
       tempInsert (product);
+      tempIterate();
         break;
     default:
         customize(product);

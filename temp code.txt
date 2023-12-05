@@ -1,7 +1,79 @@
- printf("\nHello customer. Welcome to Starbucks!");
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "../../header/Customize.h"
 
-    File = (char *) malloc(strlen("../text/category.txt")+1);
 
-    strcpy(File, "../text/category.txt");
+tempcustomizationsList *head;
+void tempInsert(char *addCustomization){
+  tempcustomizationsList *newElement;
+  newElement = malloc(sizeof(tempcustomizationsList));
+  newElement->data = malloc(strlen(addCustomization) + 1);
+  strcpy (newElement->data, addCustomization);
+  newElement ->next = NULL;
+  if (head == NULL){
+    head = newElement;
 
-    readFile(File,0);
+  }else {
+        tempcustomizationsList *current = head;
+        while (current->next != NULL) {
+            current = current->next;
+        }
+        current->next = newElement;
+    }
+
+
+}
+
+void tempIterate(){
+    if (head == NULL){
+    printf("Sorry, There is no list");
+
+  }else {
+        tempcustomizationsList *current = head;
+        while (current->next != NULL) {
+          printf("%s",current->data);
+            current = current->next;
+        }
+
+    }
+}
+
+
+void check(char *item, char *number) {
+
+  //This section is here to detect weather or not an item is already been customized. 
+  tempcustomizationsList *current = head;
+        while (current != NULL) {
+        if (strstr(current->data, item) != NULL) {
+            printf("Already here\n");
+            break;
+        }
+        current = current->next;
+    }
+  
+
+//This is to convert a option to a String. 
+ char *addCusto = (char*)malloc(sizeof(char)*20);
+     strcat(addCusto, "\t");
+    strcat(addCusto, item);
+    strcat(addCusto, "'s packets: ");
+    strcat(addCusto,number);
+    strcat(addCusto,"\n");
+    tempInsert(addCusto);
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+

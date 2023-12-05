@@ -35,7 +35,57 @@ void tempIterate(){
           printf("%s",current->data);
             current = current->next;
         }
-          printf("%s",current->data);
 
     }
 }
+
+
+void check(char *item, char *number) {
+
+  //This variable will always = 0. If it equals =0, we call temp insert. If not, we will skip over the code.
+  int toTheEnd = 0;
+
+
+//This is to convert a option to a String. 
+ char *addCusto = (char*)malloc(sizeof(char)*20);
+     strcat(addCusto, "\t");
+    strcat(addCusto, item);
+    strcat(addCusto, "'s packets: ");
+    strcat(addCusto,number);
+    strcat(addCusto,"\n");
+
+
+
+
+
+  //This section is here to detect weather or not an item is already been customized. 
+  tempcustomizationsList *current = head;
+  tempcustomizationsList * prev = malloc(sizeof(tempcustomizationsList));
+  prev = NULL;
+        while (current != NULL) {
+        if (strstr(current->data, item) != NULL) {
+            printf("Already here\n");
+            break;
+        }
+        prev = current;
+        current = current->next;
+    }
+  
+
+    
+    tempInsert(addCusto);
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
