@@ -11,12 +11,15 @@ Customizations:
 	@gcc -c ./source/Customizations/Customize.c -o ./objects/Customize.o
 	@gcc -c ./source/Customizations/IO.c -o ./objects/IO.o
 	@gcc -c ./source/Customizations/List.c -o ./objects/List.o
+Basket:
+	@gcc -c ./source/Basket/insert.c -o ./objects/insert.o
 
-compile: IO Customizations
+compile: IO Customizations Basket
 
 Libraries:
 	@ar rcs ./library/lib_IO.a ./objects/menu.o ./objects/Interactions.o
 	@ar rcs ./library/lib_CUSTOMIZE.a ./objects/Customize.o ./objects/IO.o ./objects/List.o
+	@ar rcs ./library/lib_BASKET.a ./objects/insert.o
 	@echo "Ready to Run"
 
 clean:
@@ -25,10 +28,10 @@ clean:
 
 run:
 ifeq ($(OS),Linux)
-	@gcc -o ./builds/Linux Main.c -Iheader -Llibrary -l_IO -l_CUSTOMIZE
+	@gcc -o ./builds/Linux Main.c -Iheader -Llibrary -l_IO -l_CUSTOMIZE -l_BASKET
 	@cd builds && ./Linux
 else ifeq ($(OS),Darwin)
-	@gcc -o ./builds/Mac Main.c -Iheader -Llibrary -l_IO -l_CUSTOMIZE
+	@gcc -o ./builds/Mac Main.c -Iheader -Llibrary -l_IO -l_CUSTOMIZE -l_BASKET
 	@cd builds && ./Mac
 endif
 

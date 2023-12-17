@@ -11,6 +11,7 @@ void splitter(char item[] ,int path);
 void picker(char *File);
 void readFile(char *File, int path);
 int input();
+void start();
 extern char *File;
 
 #endif //STARBUCKSC_FILEIO_H

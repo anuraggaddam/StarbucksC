@@ -57,12 +57,13 @@ void size()
 
     switch (input[0])
     {
-    case 's':
     case 'S':
+    case 's':
         customizations = (char *)malloc(14);
         strcpy(customizations, "\n\tSize: small\n");
         tempInsert (customizations);
         free(input);
+        free (customizations);
         input = NULL;
         break;
     case 'M':
@@ -71,6 +72,7 @@ void size()
         strcpy(customizations, "\n\tSize: medium\n");
         tempInsert (customizations);
         free(input);
+        free (customizations);
         input = NULL;
         break;
     case 'L':
@@ -78,6 +80,7 @@ void size()
         customizations = (char *)malloc(14);
         strcpy(customizations, "\n\tSize: large\n");
         tempInsert (customizations);
+        free (customizations);
         free(input);
         input = NULL;
         break;

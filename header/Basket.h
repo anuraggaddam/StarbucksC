@@ -4,11 +4,14 @@
 
 typedef struct node{
     char *order;//When we set value to order. Make sure to copy the contents and make other variable null;
-    node *next; //
+    struct node *next; //
 }node;
 
 
-extern node *head;
-
+extern node *top;
+void insert(char *orderString);
+void iterate();
+void afterBasket();
+void delete();
 
 #endif //STARBUCKSC_BASKET_H

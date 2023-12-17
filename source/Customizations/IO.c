@@ -147,6 +147,7 @@ void again(){
         break;
     case 'n':
         tempInsert (product);
+        product = NULL;
         clean();
         break;
     default:

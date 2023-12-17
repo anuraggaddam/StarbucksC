@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../../header/Customize.h"
-
+#include "../../header/Basket.h"
 
 tempcustomizationsList *head;
 void tempInsert(char *addCustomization){
@@ -107,7 +107,7 @@ void clean (){
 
 void ship() {
     tempcustomizationsList* finalit = head;
-    char* finalCustomize = calloc(1, sizeof(char) * 100);
+    char* finalCustomize = calloc(1,sizeof(char)*100);
 
     // Use a separate string to keep track of unique entries
     char uniqueEntries[100] = "";
@@ -120,9 +120,10 @@ void ship() {
         finalit = finalit->next;
     }
 
-    printf("%s", finalCustomize);
+   insert(finalCustomize);
 
     free(finalCustomize);
+    finalCustomize = NULL;
 }
 
 
