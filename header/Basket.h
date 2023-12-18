@@ -15,4 +15,6 @@ void afterBasket();
 void delete();
 int checkSize();
 
+void count(node *orderNode);
+
 #endif //STARBUCKSC_BASKET_H

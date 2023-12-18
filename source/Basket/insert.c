@@ -70,7 +70,7 @@ void afterBasket(){
        delete();
         break;
     case 3:
-        printf("Please create a payment method\n");
+        count(top);
         break;
     default:
         afterBasket();
@@ -132,3 +132,7 @@ int checkSize() {
 
     return count;
 }
+
+
+
+
