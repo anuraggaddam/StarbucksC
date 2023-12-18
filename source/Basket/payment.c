@@ -45,6 +45,8 @@ void calculate(int *s, int *m, int *l , node *orderNode){
 
 }
 
+
+
 void info(int *total, node *orderNode){
 	   char first[100];
 	   char last[100];
@@ -155,8 +157,6 @@ void info(int *total, node *orderNode){
    	strcat(receipt,"\n");
 
 
-
- 	//this part ain't working
 
 
 	char filename[] = "../receipts/";
