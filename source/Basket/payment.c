@@ -154,20 +154,21 @@ void info(int *total, node *orderNode){
    	strcat(receipt, card);
    	strcat(receipt,"\n");
 
- 	printf("%s",receipt);
 
 
  	//this part ain't working
-   	FILE *file;
 
-	char filename[200] = "../../receipts/";
+
+	char filename[] = "../receipts/";
 	strcat(filename, full);
 	strcat(filename, " ");
-	strcat(filename, date);
+	strcat(filename, building);
 	strcat(filename, ".txt");
+	printf("Successfully placed order");
 
+	 FILE *file;
 	file = fopen(filename, "w");
-
 	fprintf(file, "%s", receipt);
+
 	fclose(file);
 }
