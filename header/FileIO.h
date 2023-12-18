@@ -12,6 +12,7 @@ void picker(char *File);
 void readFile(char *File, int path);
 int input();
 void start();
+void writeFile(char *order, char *name, char *date);
 extern char *File;
 
 #endif //STARBUCKSC_FILEIO_H

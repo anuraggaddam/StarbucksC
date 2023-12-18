@@ -59,7 +59,7 @@ void size()
     case 'S':
     case 's':
         customizations = (char *)malloc(14);
-        strcpy(customizations, "\n\tSize: small\n");
+        strcpy(customizations, "\n\t\tSize: small\n");
         tempInsert (customizations);
         free(input);
         free (customizations);
@@ -68,7 +68,7 @@ void size()
     case 'M':
     case 'm':
         customizations = (char *)malloc(14);
-        strcpy(customizations, "\n\tSize: medium\n");
+        strcpy(customizations, "\n\t\tSize: medium\n");
         tempInsert (customizations);
         free(input);
         free (customizations);
@@ -77,7 +77,7 @@ void size()
     case 'L':
     case 'l':
         customizations = (char *)malloc(14);
-        strcpy(customizations, "\n\tSize: large\n");
+        strcpy(customizations, "\n\t\tSize: large\n");
         tempInsert (customizations);
         free (customizations);
         free(input);

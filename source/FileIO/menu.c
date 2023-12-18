@@ -109,8 +109,10 @@ if (path == 1){
     end[index] = '\0';
     free(item);
     item = NULL;
-
-    tempInsert (end);
+   char fin [50];
+   strcat(fin, "\t");
+   strcat(fin,end);
+    tempInsert (fin);
     customize(end);
 
 }

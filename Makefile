@@ -6,6 +6,7 @@ build: compile Libraries
 IO:
 	@gcc -c ./source/FileIO/menu.c -o ./objects/menu.o
 	@gcc -c ./source/Interactions/Interactions.c -o ./objects/Interactions.o
+	@gcc -c ./source/FileIO/writer.c -o ./objects/writer.o
 
 Customizations:
 	@gcc -c ./source/Customizations/Customize.c -o ./objects/Customize.o
@@ -18,7 +19,7 @@ Basket:
 compile: IO Customizations Basket
 
 Libraries:
-	@ar rcs ./library/lib_IO.a ./objects/menu.o ./objects/Interactions.o
+	@ar rcs ./library/lib_IO.a ./objects/menu.o ./objects/Interactions.o ./objects/writer.o
 	@ar rcs ./library/lib_CUSTOMIZE.a ./objects/Customize.o ./objects/IO.o ./objects/List.o
 	@ar rcs ./library/lib_BASKET.a ./objects/insert.o
 	@ar rcs ./library/lib_PAYMENT.a ./objects/payment.o

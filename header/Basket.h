@@ -16,5 +16,7 @@ void delete();
 int checkSize();
 
 void count(node *orderNode);
+void calculate(int *s, int *m, int *l, node *orderNode);
+void info(int *total, node *orderNode);
 
 #endif //STARBUCKSC_BASKET_H
