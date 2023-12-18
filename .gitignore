@@ -1,5 +1,5 @@
 
-./receipts
-./objects
-./library
-./builds
+./linux/receipts
+./linux/objects
+./linux/library
+./linux/builds
