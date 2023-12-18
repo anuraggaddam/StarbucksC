@@ -7,6 +7,8 @@ build: create compile Libraries
 ifeq ($(OS),Linux)
 	
 
+
+
 create:
 	@mkdir ./linux/library
 	@mkdir ./linux/builds
@@ -50,6 +52,13 @@ run:
 	@echo "Linking Libraries"
 	@clear
 	@cd ./linux/builds && ./Linux
+
+
+
+
+
+
+
 else ifeq ($(OS),Darwin)
 	@gcc -o ./builds/Mac Main.c -Iheader -Llibrary -l_IO -l_CUSTOMIZE -l_BASKET -l_PAYMENT
 	@echo "Linking Libraries"

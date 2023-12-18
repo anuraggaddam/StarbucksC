@@ -3,3 +3,7 @@
 ./linux/objects
 ./linux/library
 ./linux/builds
+
+./idea
+./vscode
+./DS_Store
