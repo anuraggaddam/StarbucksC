@@ -16,6 +16,7 @@ void again();
 void check(char *item, char *number);
 void clean ();
 void ship();
+void clear();
 
 extern char *product;
 extern char *customizations;

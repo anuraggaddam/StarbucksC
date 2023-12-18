@@ -11,6 +11,7 @@ void tempInsert(char *addCustomization){
   newElement->data = malloc(strlen(addCustomization) + 1);
   strcpy (newElement->data, addCustomization);
   newElement ->next = NULL;
+  addCustomization = NULL;
   if (head == NULL){
     head = newElement;
 
@@ -87,6 +88,10 @@ void check(char *item, char *number) {
 
 }
 
+void clear(){
+  head = NULL;
+}
+
 
 
 void clean (){
@@ -121,9 +126,13 @@ void ship() {
     }
 
    insert(finalCustomize);
-
+   clear();
+   
     free(finalCustomize);
     finalCustomize = NULL;
+    head = NULL;
+    iterate();
+
 }
 
 

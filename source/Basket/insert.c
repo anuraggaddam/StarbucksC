@@ -30,7 +30,7 @@ void insert(char *orderString){
         current->next = newNode;
     }
 
-    iterate();
+ 
 
 }
 

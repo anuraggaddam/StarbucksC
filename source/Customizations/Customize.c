@@ -37,7 +37,6 @@ void customize(char *item)
         options();
         break;
     case 'n':
-      tempInsert (product);
      clean();
         break;
     default:
