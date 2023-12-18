@@ -52,7 +52,7 @@ void check(char *item, char *number) {
 //This is to convert a option to a String. 
  char *addCusto = (char*)malloc(strlen (item)*3);
    addCusto[0] = '\0';
-     strcat(addCusto, "\t");
+     strcat(addCusto, "\t\t");
     strcat(addCusto, item);
     strcat(addCusto, "'s packets: ");
     strcat(addCusto,number);
