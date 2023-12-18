@@ -79,29 +79,56 @@ void afterBasket(){
 }
 
 
-void delete(){
-
-
-    if (top == NULL){
+void delete() {
+    if (top == NULL) {
         printf("The basket is empty\n");
-    }
-    else{
-        printf("This is your basket:\n\n");
+    } else {
+        int size = checkSize();
+        int option;
+       
         sleep(1);
-    node *temp = top; 
-    while (temp != NULL) {
-        printf("%s", temp->order);
-        temp = temp->next;
+        printf("Enter the item you want to delete (1, 2, 3, etc)\n");
+        printf("You can only delete 1 item at a time\n");
+        printf("Enter number:\n");
+        scanf("%d",&option);
+
+        if (option >size){
+            delete();
+        }
+        else if(option == 1 && size == 1){
+            top = NULL;
+        }else if(option == 1){
+            node *prev = top;
+            node *current = prev->next;
+            top = current;
+        }else{
+            node *current = top;
+            node *prev;
+            for (int a = 1; a < option; a ++){
+                prev = current;
+                current = current->next;
+            }
+            prev->next = current->next;
+        current = NULL;
+        prev = NULL;
         }
 
-
-
-
-    sleep(1);
-   printf("Enter the item you want to delete (1,2,3,etc)\n");
-   printf("You can only delete 1 item at a time\n");
+        start();
 
     }
+}
 
+int checkSize() {
+    int count = 0;
+    if (top == NULL) {
+        return 0;
+    } else {
+        node* temp = top; 
+        while (temp != NULL) {
+            count++;
+            temp = temp->next;
+        }
+    }
 
+    return count;
 }

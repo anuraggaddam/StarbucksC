@@ -4,6 +4,7 @@
 #include <string.h>
 #include "../../header/FileIO.h"
 #include "../../header/Customize.h"
+#include "../../header/Basket.h"
 
 
 
@@ -18,6 +19,9 @@ void categories(char *File){
 
 
     switch (selection){
+        case 0:
+            iterate();
+            break;
         case 1:
             File = (char *) realloc(File,strlen("../text/hcoffee.txt")+1);
             strcpy(File, "../text/hcoffee.txt");
@@ -176,6 +180,7 @@ void readFile(char *File, int path){
     printf("\n\n\nloading options. please wait\n");
     sleep(1);
     printf("\nPlease choose an option below:\n");
+    printf("\nClick 0 for Basket\n");
     FILE *pFile = fopen(File,"r");
     if (pFile == NULL){
         printf("Something went wrong;");
@@ -200,5 +205,4 @@ void readFile(char *File, int path){
     }
 
 }
-
 

@@ -3,10 +3,13 @@
 #include <stdlib.h>
 #include <string.h>
 #include "./header/Customize.h"
+#include <unistd.h>
 
 char *File;
 int main(){
-    printf("\nHello customer. Welcome to Starbucks!");
+    printf("\nHello customer. Welcome to Starbucks!\n");
+    printf("Small drinks are $3, Medium Drinks are $4 and Large Drinks are $5\n");
+    sleep(2);
 
    start();
 

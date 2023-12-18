@@ -1,7 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 #include "../../header/Customize.h"
+#include "../../header/FileIO.h"
 #include "../../header/Basket.h"
 
 tempcustomizationsList *head;
@@ -131,7 +133,10 @@ void ship() {
     free(finalCustomize);
     finalCustomize = NULL;
     head = NULL;
-    iterate();
+    sleep(1);
+
+    printf("added to cart\n");
+   start();
 
 }
 

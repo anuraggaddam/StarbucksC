@@ -13,5 +13,6 @@ void insert(char *orderString);
 void iterate();
 void afterBasket();
 void delete();
+int checkSize();
 
 #endif //STARBUCKSC_BASKET_H
