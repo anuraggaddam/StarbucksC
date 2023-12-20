@@ -1,0 +1,9 @@
+1. Splash One Milk
+2. Splash Two Milk
+3. Splash Almond Milk
+4. Splash Cocunut Milk
+5. Splash Cream
+6. Splash Heavy Cream
+7. Splash Oat Milk
+8. Splash Whole Milk
+9. Splash Sweet Cream

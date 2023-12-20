@@ -3,6 +3,11 @@ linux/objects
 linux/library
 linux/builds
 
+unix/receipts
+unix/objects
+unix/library
+unix/builds
+
 ./idea
 ./vscode
 ./DS_Store

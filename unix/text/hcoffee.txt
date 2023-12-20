@@ -1,0 +1,33 @@
+AMERICANOS:
+1. Caffe Americano
+
+BREWED COFFEES:
+2. Veranda Blend
+3. Caffe Misto
+4. Featured Starbucks Dark Roast Coffee
+5. Pike Place Roast
+6. Decaf Pike Place Roast
+
+CAPPUCCINOS:
+7. Cappuccino
+
+EXPRESSO SHOTS:
+8. Expressso
+9. Expresso Con Panna
+
+FLAT WHITES:
+10. Flat White
+11. Honey Almond Milk Flat White
+
+LATTES:
+12. Caffe Latte
+13. Cinnamon Dolce Latte
+14. Starbucks Blonde Vanilla Latte
+
+MACCHIATOS:
+15. Carmel Macchiato
+16. Expresso Macchiato
+
+MOCHAS:
+17. Caffe Mocha
+18. White Chocolate Mocha

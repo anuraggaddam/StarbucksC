@@ -1,0 +1,15 @@
+DRINKS
+1. Hot Coffees
+2. Hot Teas
+3. Hot Drinks
+4. Frappuccino Blended Beverages
+5. Cold Coffees
+6. Iced Teas
+7. Cold Drinks
+
+FOOD
+8. Hot Breakfast
+9. Bakery
+10. Lunch
+11. Snacks & Sweets
+12. Oatmeal & Yogurt
