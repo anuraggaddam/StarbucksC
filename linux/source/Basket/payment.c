@@ -104,10 +104,10 @@ void info(int *total, node *orderNode){
    	int three;
 
    	printf("\nPlease enter date in this format: MM-DD-YY -> ");
-   	scanf("%s",&date);
+   	scanf("%s",date);
 
    	printf("\nPlease enter a time in this format: HH:MM -> ");
-   	scanf("%s",&time);
+   	scanf("%s",time);
 
 
    	printf("\nPayment system loading:\n");
