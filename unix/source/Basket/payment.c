@@ -103,7 +103,7 @@ void info(int *total, node *orderNode){
    	int cardnumber;
    	int three;
 
-   	printf("\nPlease enter date in this format: MM/DD/YY -> ");
+   	printf("\nPlease enter date in this format: MM-DD-YY -> ");
    	scanf("%s",date);
 
    	printf("\nPlease enter a time in this format: HH:MM -> ");
@@ -164,11 +164,9 @@ void info(int *total, node *orderNode){
 	strcat(filename, " ");
 	strcat(filename, building);
 	strcat(filename, ".txt");
-	printf("Successfully placed order");
-
-	 FILE *file;
+	FILE *file;
 	file = fopen(filename, "w");
 	fprintf(file, "%s", receipt);
-
 	fclose(file);
+	printf("Successfully placed order");
 }

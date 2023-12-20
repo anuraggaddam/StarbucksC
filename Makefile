@@ -1,11 +1,10 @@
 OS := $(shell uname)
 
-build: create compile Libraries
+build: clean create compile Libraries
 
 
 
 ifeq ($(OS),Linux)
-	
 
 
 
@@ -41,11 +40,10 @@ Libraries:
 	@echo "Creating Libraries"
 	@echo "Ready to Run"
 	@echo "To start, type make run."
-	@echo "At anytime, type make clean to delete directories"
 
 clean:
 	@rm -rf ./linux/objects/ ./linux/library/ ./linux/builds/ ./linux/receipts/
-	@echo "Deleting Directories. Source files still available."
+	@echo "Refreshing Directories for Linux"
 
 run:
 	@gcc -o ./linux/builds/Linux ./linux/Main.c -I./linux/header -L./linux/library -l_IO -l_CUSTOMIZE -l_BASKET -l_PAYMENT
@@ -86,18 +84,17 @@ Basket:
 compile: IO Customizations Basket
 
 Libraries:
-	@ar rcs ./unix/library/lib_IO.a ./unix/objects/menu.o ./unix/objects/Interactions.o ./unix/objects/writer.o
-	@ar rcs ./unix/library/lib_CUSTOMIZE.a ./unix/objects/Customize.o ./unix/objects/IO.o ./unix/objects/List.o
-	@ar rcs ./unix/library/lib_BASKET.a ./unix/objects/insert.o
-	@ar rcs ./unix/library/lib_PAYMENT.a ./unix/objects/payment.o
+	@ar rcs ./unix/library/lib_IO.dylib ./unix/objects/menu.o ./unix/objects/Interactions.o ./unix/objects/writer.o
+	@ar rcs ./unix/library/lib_CUSTOMIZE.dylib ./unix/objects/Customize.o ./unix/objects/IO.o ./unix/objects/List.o
+	@ar rcs ./unix/library/lib_BASKET.dylib ./unix/objects/insert.o
+	@ar rcs ./unix/library/lib_PAYMENT.dylib ./unix/objects/payment.o
 	@echo "Creating Libraries"
 	@echo "Ready to Run"
 	@echo "To start, type make run."
-	@echo "At anytime, type make clean to delete directories"
 
 clean:
 	@rm -rf ./unix/objects/ ./unix/library/ ./unix/builds/ ./unix/receipts/
-	@echo "Deleting Directories. Source files still available."
+	@echo "Refreshing Directories for Unix"
 
 run:
 	@gcc -o ./unix/builds/unix ./unix/Main.c -I./unix/header -L./unix/library -l_IO -l_CUSTOMIZE -l_BASKET -l_PAYMENT
