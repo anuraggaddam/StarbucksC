@@ -140,7 +140,6 @@ void info(int *total, node *orderNode){
 
    	while(iterater != NULL){
    		strcat(receipt,iterater->order);
-   		strcat(receipt, "\0");
    		iterater = iterater->next;
    	}
    	strcat(receipt, "\t\t\t\tTotal: $");
@@ -159,14 +158,18 @@ void info(int *total, node *orderNode){
 
 
 
-	char filename[] = "../receipts/";
+	char filename[100];
+	strcat(filename,"../receipts/");
 	strcat(filename, full);
 	strcat(filename, " ");
 	strcat(filename, building);
 	strcat(filename, ".txt");
+
+	
 	FILE *file;
 	file = fopen(filename, "w");
 	fprintf(file, "%s", receipt);
 	fclose(file);
-	printf("Successfully placed order");
+	printf("Successfully placed order\n");
+
 }

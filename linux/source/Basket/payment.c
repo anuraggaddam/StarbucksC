@@ -168,5 +168,5 @@ void info(int *total, node *orderNode){
 	file = fopen(filename, "w");
 	fprintf(file, "%s", receipt);
 	fclose(file);
-	printf("Successfully placed order");
+	printf("Successfully placed order\n");
 }
