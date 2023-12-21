@@ -1,0 +1,44 @@
+COLD BREWS
+1. Salted Caramel Cream Cold Brew
+2. Starbucks Reserve® Cold Brew
+3. Starbucks® Cold Brew Coffee
+4. Vanilla Sweet Cream Cold Brew
+5. Starbucks® Cold Brew Coffee with Milk
+
+NITRO COLD BREWS
+6. Starbucks Reserve® Nitro Cold Brew
+7. Nitro Cold Brew
+8. Vanilla Sweet Cream Nitro Cold Brew
+
+ICED AMERICANO
+9. Iced Caffè Americano
+
+ICED COFFEES
+10. Iced Coffee
+11. Iced Coffee with Milk
+12. Iced Espresso
+
+ICED SHAKEN ESPRESSO
+13. Iced Toasted Vanilla Oatmilk Shaken Espresso
+14. Iced Brown Sugar Oatmilk Shaken Espresso
+15. Iced Chocolate Almondmilk Shaken Espresso
+16. Iced Shaken Espresso
+
+ICED FLAT WHITES
+17. Iced Flat White
+18. Iced Honey Almondmilk Flat White
+
+ICED LATTES
+19. Starbucks Reserve® Iced Latte
+20. Starbucks Reserve® Iced Hazelnut Bianco Latte
+21. Iced Caffè Latte
+22. Iced Cinnamon Dolce Latte
+23. Iced Starbucks® Blonde Vanilla Latte
+
+ICED MACCHIATOS
+24. Iced Caramel Macchiato
+
+ICED MOCHAS
+25. Iced White Chocolate Mocha
+26. Iced Caffè Mocha
+27. Starbucks Reserve® Iced Dark Chocolate Mocha

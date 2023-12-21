@@ -1,0 +1,20 @@
+COFFEE FRAPPUCCINO:
+1. Mocha Cookie Crumble Frappuccino Blended
+2. Caramel Ribbon Crunch Frappuccino Blended
+3. Espresso Frappuccino Blended Beverage
+4. Coffee Frappuccino Blended Beverage
+5. Caffe Vanilla Frappuccino Blended Beverage
+6. Caramel Frappuccino Blended Beverage
+7. Mocha Frappuccino Blended Beverage
+8. Java Chip Frappuccino Blended Beverage
+9. White Chocolate Mocah Frappuccino Blended
+
+CREME FRAPPUCCINO:
+10. Chocolate Cookie Crumble Creme Frappuccino
+11. Caramel Ribobn Crunch Cremee Frappuccino Blended
+12. Strawberry Creme Frappuccino Blended
+13. Chair Creme Frappuccino Blended Beverage
+14. Double Chocolately Chip Creme Frappuccino Blended
+15. Matcha Creme Frappuccino Blended Beverage
+16. Vanilla Bean Creme Frappuccino Blended
+17. White Chocolate Creme Frappuccino Blended
