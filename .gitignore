@@ -8,6 +8,11 @@ unix/objects
 unix/library
 unix/builds
 
+windowss/receipts
+windows/objects
+windows/library
+windows/builds
+
 ./idea
 ./vscode
 ./DS_Store
