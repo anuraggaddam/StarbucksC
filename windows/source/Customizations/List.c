@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
-#include "..\\header\\Customize.h"
-#include "..\\header\\FileIO.h"
-#include "..\\header\\Basket.h"
+#include "..\\..\\header\\Customize.h"
+#include "..\\..\\header\\FileIO.h"
+#include "..\\..\\header\\Basket.h"
 
 tempcustomizationsList *head;
 void tempInsert(char *addCustomization){
