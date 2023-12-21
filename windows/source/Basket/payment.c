@@ -164,7 +164,8 @@ void info(int *total, node *orderNode){
 	strcat(filename, building);
 	strcat(filename, ".txt");
 
-	
+	printf("%s\n", filename);
+
 	FILE *file;
 	file = fopen(filename, "w");
 	fprintf(file, "%s", receipt);

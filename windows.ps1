@@ -43,7 +43,7 @@ Write-Host "Creating directories"
 	gcc -o .\builds\Windows.exe .\Main.c -I.\header -L.\library -l_IO -l_CUSTOMIZE -l_BASKET -l_PAYMENT
 	echo "Linking Libraries"
 	echo "Running for Windows"
-	
+	clear
 	cd .\builds ; .\Windows.exe
 
 	cd ..\..\
