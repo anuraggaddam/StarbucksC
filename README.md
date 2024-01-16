@@ -9,3 +9,5 @@ bash run.sh
 For windows:
 run the .ps1 script with powershell
 
+
+As of Jan 2024, There are no known bugs. Please contact me if there are any bugs
